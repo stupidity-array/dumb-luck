@@ -3,7 +3,7 @@
   <head>
     <title>Don't click me, please!</title>
     <meta charset="UTF-8">
-    <link href="/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <canvas width="100" height="100"></canvas>
@@ -11,10 +11,13 @@
       const canvas = document.querySelector("canvas");
       const ctx = canvas.getContext("2d");
 
+      ctx.fillColor = "#000000";
+      ctx.fillRect(0, 0, 100, 100);
+      
       function enrage() {
         alert("ow");
         ctx.fillColor = "#FF0000";
-        ctx.fill();
+        ctx.fillRect(0, 0, 100, 100);
         setTimeout(() => alert("I'm mad now >:("), 2000);
       }
 
